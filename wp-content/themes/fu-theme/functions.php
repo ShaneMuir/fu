@@ -20,7 +20,7 @@ function pageBanner($args = NULL) {
     }
 
     if (!$args['photo']) {
-        if (get_field('page_banner_background_image')) {
+        if (get_field('page_banner_background_image') AND !is_archive() AND !is_home() ) {
             $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
         } else {
             $args['photo'] = get_theme_file_uri('/images/ocean.jpg');
@@ -38,6 +38,7 @@ function pageBanner($args = NULL) {
         </div>
     </div>
 <?php }
+
 
 function university_files() {
   wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
