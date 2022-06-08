@@ -17,13 +17,17 @@ class WordCountAndTimePlugin {
     }
 
     function ifWrap($content) {
-        if(is_main_query() AND is_single() AND
-            (
+        $postType = get_post_type();
+        if($postType === "post") {
+            if(is_main_query() AND is_single() AND
+                (
                     get_option('wcp_wordcount', '1') OR
                     get_option('wcp_charactercount', '1') OR
                     get_option('wcp_readtime', '1')
-            ))  {
-            return $this->createHTML($content);
+                ))  {
+
+                return $this->createHTML($content);
+            }
         }
         return $content;
     }
