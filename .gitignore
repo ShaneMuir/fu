@@ -1,3 +1,7 @@
 .idea
 .DS_Store
 wp-config.php
+
+/wp-content/themes/fu-theme/.idea
+/wp-content/themes/fu-theme/build
+/wp-content/themes/fu-theme/node_modules
