@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
   <head>
       <meta name="charset" content="<?php bloginfo('charset'); ?>">
-      <meta name="viewport" content="width=device-width initital-scale=1">
+      <meta name="viewport" content="width=device-width initial-scale=1">
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
