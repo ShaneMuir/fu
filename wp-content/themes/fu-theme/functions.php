@@ -53,7 +53,6 @@ function university_files() {
           'root_url' => get_site_url()
   ));
 }
-
 add_action('wp_enqueue_scripts', 'university_files');
 
 
@@ -67,7 +66,6 @@ function university_features() {
     add_image_size('professorPortrait', 480, 650, true);
     add_image_size('pageBanner', 1500, 350, true);
 }
-
 add_action('after_setup_theme', 'university_features');
 
 
@@ -98,7 +96,6 @@ function university_adjust_queries($query) {
         $query->set('posts_per_page', -1);
     }
 }
-
 add_action('pre_get_posts', 'university_adjust_queries');
 
 
@@ -106,5 +103,41 @@ function universityMapKey($api) {
     $api['key'] = GOOGLE_MAP_API_KEY;
     return $api;
 }
-
 add_filter('acf/fields/google_map/api', 'universityMapKey');
+
+// Redirect subscriber accounts to homepage
+function redirectSubToFrontend() {
+    $currentUser = wp_get_current_user();
+    if( count($currentUser->roles ) == 1  AND $currentUser->roles[0] == 'subscriber') {
+        wp_redirect('/');
+        exit;
+    }
+}
+add_action('admin_init', 'redirectSubToFrontend');
+
+function noAdminForSubs() {
+    $currentUser = wp_get_current_user();
+    if( count($currentUser->roles) == 1 AND $currentUser->roles[0] == 'subscriber') {
+        show_admin_bar(false);
+    }
+}
+add_action('wp_loaded', 'noAdminForSubs');
+
+// Customise login screen
+function customLoginHtml() {
+    return esc_url(site_url('/'));
+}
+add_filter('login_headerurl', 'customLoginHtml');
+
+function loginCss() {
+    wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
+    wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    wp_enqueue_style('university_main_styles', get_theme_file_uri('/build/style-index.css'));
+    wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));
+}
+add_action('login_enqueue_scripts', 'loginCss');
+
+function loginTitle() {
+    return get_bloginfo('name');
+}
+add_filter('login_headertitle', 'loginTitle');

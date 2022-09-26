@@ -20,7 +20,7 @@ pageBanner(array(
             'post_type' => 'event',
             'meta_key' => 'event_date',
             'orderby' => 'meta_value_num',
-            #'posts_per_page' => 1,
+            'posts_per_page' => 1,
             'order' => 'ASC',
             'meta_query' => array(
                 array(
