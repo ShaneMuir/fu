@@ -1,6 +1,7 @@
 <?php
 
-function university_post_types() {
+function university_post_types(): void
+{
     // Campus Post Type
     register_post_type('campus', array(
         'show_in_rest' => true,
@@ -86,6 +87,21 @@ function university_post_types() {
             'singular_name' => 'Note'
         ),
         'menu_icon' => 'dashicons-welcome-write-blog'
+    ));
+
+    // Like Post Type
+    register_post_type('like', array(
+        'supports' => array('title'),
+        'public' => false,
+        'show_ui' => true,
+        'labels' => array(
+            'name' => 'Likes',
+            'add_new_item' => 'Add New Like',
+            'edit_item' => 'Edit Like',
+            'all_items' => 'All Likes',
+            'singular_name' => 'Like'
+        ),
+        'menu_icon' => 'dashicons-heart'
     ));
 }
 

@@ -59,6 +59,11 @@
                 "param": "post_type",
                 "operator": "!=",
                 "value": "note"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "like"
             }
         ]
     ],
@@ -71,5 +76,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664184953
+    "modified": 1676545154
 }
