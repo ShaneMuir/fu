@@ -16,23 +16,17 @@ function fu_custom_rest () {
 add_action('rest_api_init', 'fu_custom_rest');
 
 function pageBanner($args = NULL) {
-
-    if (!$args['title']) {
+    if($args == NULL) {
         $args['title'] = get_the_title();
-    }
 
-    if (!$args['subtitle']) {
         $args['subtitle'] = get_field('page_banner_subtitle');
-    }
 
-    if (!$args['photo']) {
         if (get_field('page_banner_background_image') AND !is_archive() AND !is_home() ) {
             $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
         } else {
             $args['photo'] = get_theme_file_uri('/images/ocean.jpg');
         }
     }
-
     ?>
     <div class="page-banner">
         <div class="page-banner__bg-image" style="background-image: url(<?php echo $args['photo']; ?>);"></div>

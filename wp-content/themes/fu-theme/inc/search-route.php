@@ -4,7 +4,8 @@ add_action('rest_api_init', 'fuRegisterSearch');
 function fuRegisterSearch() {
     register_rest_route('fu/v1', 'search', array(
         'methods' => WP_REST_SERVER::READABLE, //get method
-        'callback' => 'fuSearchResults'
+        'callback' => 'fuSearchResults',
+        'permission_callback' => '__return_true'
     ));
 }
 

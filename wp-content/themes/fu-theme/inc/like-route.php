@@ -5,12 +5,14 @@ add_action('rest_api_init', 'fuLikeRoutes');
 function fuLikeRoutes() {
     register_rest_route('fu/v1', 'manageLike', array(
         'methods' => 'POST',
-        'callback' => 'createLike'
+        'callback' => 'createLike',
+        'permission_callback' => '__return_false'
     ));
 
     register_rest_route('fu/v1', 'manageLike', array(
         'methods' => 'DELETE',
-        'callback' => 'deleteLike'
+        'callback' => 'deleteLike',
+        'permission_callback' => '__return_false'
     ));
 }
 
