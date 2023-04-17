@@ -229,3 +229,11 @@ function fu_disable_comments_admin_bar() {
     }
 }
 add_action('init', 'fu_disable_comments_admin_bar');
+
+function universityQueryVars($vars) {
+    $vars[] = 'skyColor';
+    $vars[] = 'grassColor';
+    return $vars;
+}
+
+add_filter('query_vars', 'universityQueryVars');
