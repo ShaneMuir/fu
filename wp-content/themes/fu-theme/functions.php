@@ -142,7 +142,7 @@ add_action('login_enqueue_scripts', 'loginCss');
 function loginTitle() {
     return get_bloginfo('name');
 }
-add_filter('login_headertitle', 'loginTitle');
+add_filter('login_headertext', 'loginTitle');
 
 // Force notes to be published as private
 function makeNotePrivate($data, $postarr) {
