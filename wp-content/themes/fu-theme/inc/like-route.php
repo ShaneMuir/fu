@@ -6,13 +6,13 @@ function fuLikeRoutes() {
     register_rest_route('fu/v1', 'manageLike', array(
         'methods' => 'POST',
         'callback' => 'createLike',
-        'permission_callback' => '__return_false'
+//        'permission_callback' => '__return_false'
     ));
 
     register_rest_route('fu/v1', 'manageLike', array(
         'methods' => 'DELETE',
         'callback' => 'deleteLike',
-        'permission_callback' => '__return_false'
+//        'permission_callback' => '__return_false'
     ));
 }
 
