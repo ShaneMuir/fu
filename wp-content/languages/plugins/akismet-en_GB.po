@@ -1,15 +1,15 @@
-# Translation of Plugins - Akismet Spam Protection - Stable (latest release) in English (UK)
-# This file is distributed under the same license as the Plugins - Akismet Spam Protection - Stable (latest release) package.
+# Translation of Plugins - Akismet Anti-Spam: Spam Protection - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - Akismet Anti-Spam: Spam Protection - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-20 19:51:11+0000\n"
+"PO-Revision-Date: 2023-04-04 15:24:55+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/4.0.0-alpha.4\n"
 "Language: en_GB\n"
-"Project-Id-Version: Plugins - Akismet Spam Protection - Stable (latest release)\n"
+"Project-Id-Version: Plugins - Akismet Anti-Spam: Spam Protection - Stable (latest release)\n"
 
 #: views/notice.php:32
 msgid "WP-Cron has been disabled using the DISABLE_WP_CRON constant. Comment rechecks may not work properly."
@@ -129,7 +129,7 @@ msgstr "Akismet could not recheck your comments for spam."
 
 #: class.akismet-admin.php:439
 msgid "You don&#8217;t have permission to do that."
-msgstr "You don&#8217;t have permission to do that."
+msgstr "You don't have permission to do that."
 
 #: class.akismet-cli.php:165
 msgid "Stats response could not be decoded."
@@ -221,11 +221,6 @@ msgstr "Manual Configuration"
 msgid "On this page, you are able to update your Akismet settings and view spam stats."
 msgstr "On this page, you are able to update your Akismet settings and view spam stats."
 
-#. Description of the plugin
-msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key."
-msgstr "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key."
-
-#. Plugin Name of the plugin
 #: class.akismet-admin.php:114 class.akismet-admin.php:117
 msgid "Akismet Anti-Spam"
 msgstr "Akismet Anti-Spam"
@@ -453,10 +448,6 @@ msgstr "This comment was reported as spam."
 #. Author URI of the plugin
 msgid "https://automattic.com/wordpress-plugins/"
 msgstr "https://automattic.com/wordpress-plugins/"
-
-#. Author of the plugin
-msgid "Automattic"
-msgstr "Automattic"
 
 #. Plugin URI of the plugin
 msgid "https://akismet.com/"
