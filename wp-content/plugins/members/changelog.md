@@ -1,4 +1,61 @@
 # Change Log
+## 3.2.17 - 2024-12-23
+### Added
+- Added bulk select/unselect checkboxes on Role capabilities
+
+## 3.2.16 - 2024-12-12
+### Fixed
+- Protected posts being forced-hidden from API search even if setting was off
+
+## 3.2.15 - 2024-12-10
+### Fixed
+- Translation errors
+- Fixed styles and formatting on add-ons and about pages
+### Added
+- Growth Tools menu item
+
+## 3.2.14 - 2024-11-30
+### Fixed
+- Error in REST API calls when posts results not an array
+
+## 3.2.12 - 2024-11-29
+### Fixed
+- Cleaned up prior author name and links
+- Cleaned up broken or incorrect links
+- Removed some unnecessary files
+- Fixed incorrect gettext calls
+- Removed unneeded load_plugin_textdomain calls
+- Updated POT translation file
+
+## 3.2.11 - 2024-11-29
+### Fixed
+- Translation warnings after WP 6.7
+- Add option to hide protected content from REST API searches
+- Add support for Loco Translate plugin (via new loco.xml file)
+
+## 3.2.10 - 2024-09-09
+### Fixed
+- Capability checks on AJAX calls
+- PHP warning for $wp_embed
+- Requiring PHP 7.4 min now
+
+## 3.2.9 - 2023-11-28
+### Fixed
+- Fix PHP 8.1 deprecation notice on ACF integration (props @DSGND)
+
+## 3.2.8 - 2023-09-20
+### Added
+- Add members_wp_roles filter to WP roles in Content Permission box
+
+### Fixed
+- Fix Content Permission icon in Panel block
+- Fix position of Field Group menu item in ACF
+
+## 3.2.6-7 - 2023-08-08
+### Fixed
+- PHP 8+ Compatibility
+- members_show_roles_page_cap filter added for edit_roles_cap
+- Fix improperly named variable
 
 ## 3.2.5 - 2023-04-28
 ### Fixed

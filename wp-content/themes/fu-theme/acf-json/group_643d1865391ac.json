@@ -6,6 +6,7 @@
             "key": "field_643d186c595c2",
             "label": "Slides",
             "name": "slides",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -20,11 +21,13 @@
             "max": 0,
             "layout": "block",
             "button_label": "Add slide",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_643d187b595c3",
                     "label": "Slide Image",
                     "name": "slide_image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "Preferred Image size: 1200x800 or bigger",
                     "required": 0,
@@ -43,12 +46,14 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_643d186c595c2"
                 },
                 {
                     "key": "field_643d18b9595c4",
                     "label": "Title",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -62,12 +67,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_643d186c595c2"
                 },
                 {
                     "key": "field_643d18c8595c5",
                     "label": "Sub Title",
                     "name": "sub_title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -81,12 +88,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_643d186c595c2"
                 },
                 {
                     "key": "field_643d18cd595c6",
                     "label": "CTA",
                     "name": "cta",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -96,7 +105,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_643d186c595c2"
                 }
             ]
         }
@@ -106,7 +116,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "20"
+                "value": "2"
             }
         ]
     ],
@@ -119,5 +129,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681725710
+    "modified": 1737388341
 }
