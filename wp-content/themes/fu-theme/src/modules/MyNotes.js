@@ -107,8 +107,7 @@ class MyNotes {
         } else {
             try {
                 const response = await axios.post(fuData.root_url + "/wp-json/wp/v2/note/", ourNewPost)
-
-                if (response.data != "You have reached your note limit.") {
+                if (response.data != "You have reached your note limit!") {
                     document.querySelector(".new-note-title").value = ""
                     document.querySelector(".new-note-body").value = ""
                     document.querySelector("#my-notes").insertAdjacentHTML(

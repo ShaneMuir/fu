@@ -1,0 +1,21 @@
+{
+  "name": "fu-fse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start src/index.js our-blocks/banner.js our-blocks/genericheading.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "@wordpress/scripts": "*",
+    "axios": "1.8.2",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "pnpm": "^10.7.1"
+  }
+}
